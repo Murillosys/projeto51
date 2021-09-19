@@ -1,6 +1,7 @@
 <template>
 <main>
     <div class="container">
+    <hr class="mt-3">
         <div class="row">
             <div class="col-md-4 produto" v-for="produto in produtos" :key="produto.index">
                 <div class="card mb-4 shadow-sm">
@@ -21,7 +22,7 @@
                             </p>
                         </div>
                         
-                        <button class="btn btn-sm btn-dark"  type="button" v-on:click="addCartItem(produto)"> Comprar </button>
+                        <button class="btn btn-primary mt-2 d-block"  type="button" v-on:click="addCartItem(produto)"> Comprar </button>
                         <div class="card-footer">                           
                             
                             <small class="text-success">Produto em estoque</small>
