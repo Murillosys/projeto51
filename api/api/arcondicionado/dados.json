@@ -1,0 +1,8 @@
+{
+  "id": "arcondicionado",
+  "nome": "arcondicionado",
+  "preco": 2999,
+  "descricao": "Desc do produto do produto",
+  "estoque": 12,
+  "img": "./api/arcondicionado/arcondicionado.jpg"
+}

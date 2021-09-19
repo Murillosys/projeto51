@@ -1,0 +1,8 @@
+{
+  "id": "geladeira",
+  "nome": "geladeira",
+  "preco": 1800,
+  "descricao": "Desc do produto do produto",
+  "estoque": 12,
+  "img": "./api/geladeira/geladeira.jpg"
+}

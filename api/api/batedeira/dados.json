@@ -1,0 +1,8 @@
+{
+  "id": "batedeira",
+  "nome": "batedeira",
+  "preco": 500,
+  "descricao": "Desc do produto do produto",
+  "estoque": 8,
+  "img": "./api/batedeira/batedeira.jpg"
+}

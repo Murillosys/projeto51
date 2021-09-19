@@ -1,0 +1,8 @@
+{
+  "id": "jbl",
+  "nome": "jbl",
+  "preco": 999,
+  "descricao": "Desc do produto do produto",
+  "estoque": 30,
+  "img": "./api/jbl/jbl.jpg"
+}
