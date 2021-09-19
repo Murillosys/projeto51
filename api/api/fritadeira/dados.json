@@ -1,8 +1,0 @@
-{
-  "id": "fritadeira",
-  "nome": "fritadeira",
-  "preco": 350,
-  "descricao": "Desc do produto do produto",
-  "estoque": 15,
-  "img": "./api/fritadeira/fritadeira.jpg"
-}

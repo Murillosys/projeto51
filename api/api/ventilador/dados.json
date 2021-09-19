@@ -1,8 +1,0 @@
-{
-  "id": "ventilador",
-  "nome": "ventilador",
-  "preco": 150,
-  "descricao": "Desc do produto do produto",
-  "estoque": 3,
-  "img": "./api/ventilador/ventilador.jpg"
-}

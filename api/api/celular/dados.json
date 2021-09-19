@@ -1,8 +1,0 @@
-{
-  "id": "celular",
-  "nome": "celular",
-  "preco": 1300,
-  "descricao": "Desc do produto do produto",
-  "estoque": 12,
-  "img": "./api/celular/celular.jpg"
-}

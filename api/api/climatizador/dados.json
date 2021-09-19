@@ -1,8 +1,0 @@
-{
-  "id": "climatizador",
-  "nome": "climatizador",
-  "preco": 800,
-  "descricao": "Desc do produto do produto",
-  "estoque": 12,
-  "img": "./api/climatizador/climatizador.jpg"
-}

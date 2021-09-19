@@ -1,8 +1,0 @@
-{
-  "id": "fogao",
-  "nome": "fogao",
-  "preco": 1500,
-  "descricao": "Desc do produto do produto",
-  "estoque": 10,
-  "img": "./api/fogao/fogao.jpg"
-}
