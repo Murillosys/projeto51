@@ -1,5 +1,43 @@
 <template>
 <main>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary border-bottom shadow-sm mb3">
+        <div class="container">
+            <a class="navbar-brand"><strong>VENDAS.COM</strong></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+             data-target=".navbar-collapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse">
+            <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item">
+                    <a href="" class="nav-link text-white">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link text-white">Produtos</a>
+                </li>
+            </ul>
+            <div class="align-self-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-white">Cadastra-se</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-white">Entrar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-white">
+                            <img class="mb-2" src="\img\util\carrinho-compra.png" alt="" width="24" height="24">{{cartLength}}<img/>                            
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </nav>
+
+
+
+
     <div class="container">
     <hr class="mt-3">
         <div class="row">
@@ -21,7 +59,7 @@
                                 {{produto.descricao}}
                             </p>
                         </div>
-                        
+                        <button class="btn btn-primary mt-2 d-block"  type="button" v-on:click="removeCartItem(produto)"> Remover </button>
                         <button class="btn btn-primary mt-2 d-block"  type="button" v-on:click="addCartItem(produto)"> Comprar </button>
                         <div class="card-footer">                           
                             
@@ -32,7 +70,6 @@
             </div>
         </div>
     </div>
-
 </main>
 </template>
 
@@ -42,23 +79,21 @@ export default {
     data: () => ({
         produtos: [],
         produto: {},
-        cart: [],
         alertMessage: "",
-        alertStatus: false
+        alertStatus: false,
+        cartLength: 0
     }),    
-        filters: {
-            numeroPreco(valor){
-                if(Number.isInteger(valor)){
-                    return valor.toLocaleString("pt-BR", {style: "currency", currency: "BRL"});
-                }
-
-                return valor;
-
+    filters: {
+        numeroPreco(valor){
+            if(Number.isInteger(valor)){
+                return valor.toLocaleString("pt-BR", {style: "currency", currency: "BRL"});
             }
-        },
-        computed:{
-            totalCart(){
-                let total = 0;
+            return valor;
+        }
+    },
+    computed:{
+        totalCart(){
+            let total = 0;
                 if(this.cart.length){
                     this.cart.forEach(produto => {
                         total += produto.preco;
@@ -66,8 +101,7 @@ export default {
                 }
                 return total;
             }
-        },
-
+    },
     methods: {
         getProducts() {
             this.produtos = [];
@@ -82,48 +116,40 @@ export default {
             const data = await response.json();
             this.produto = await JSON.parse(JSON.stringify(data));
         },
-
+        atualizaQuantidadeCarrinho(){
+            this.cartLength = this.$cart.length
+        },
         addCartItem: function (produto) {
-            this.cart.push(produto);
-            this.showAlert(produto.nome+" foi adicionado ao carrinho");
-        },
-        removeCartItem(index) {
-            this.cart.splice(index, 1)
+            this.$cart.push(produto);
+            this.atualizaQuantidadeCarrinho()
 
-        },
-        checkLocalStorage() {
-            if (window.localStorage.cart) {
-                this.cart = JSON.parse(window.localStorage.cart);
-            }
+            // 2 Linhas de baixo só pra teste visualização do carrinho no console
+            this.showAlert(produto.nome+" foi adicionado ao carrinho");
+            this.showAlert(this.$cart);
+        },        
+        removeCartItem : function (produto) {
+            if( this.$cart.find( produtoDoCarrinho => produtoDoCarrinho.id === produto.id )) {
+                this.$cart.splice(this.$cart.indexOf(produto), 1);
+                this.atualizaQuantidadeCarrinho()
+            }            
+
+            // 1 Linha de baixo só pra teste visualização do carrinho no console
+            this.showAlert(this.$cart);
         },
         showAlert(message) {
             console.log(message);
             this.alertMessage = message;
             this.alertStatus = true;
-
             setTimeout(() => {
                 this.alertStatus = false;
             }, 1500)
         },
         router() {
             const hash = document.location.hash;
-            if (hash)
-                this.getProduct(hash.replace("#", ""));
+            if (hash){ this.getProduct(hash.replace("#", "")); }
         },
     },
-     watch:{
-            cart(){
-                window.localStorage.cart = JSON.stringify(this.cart);
-            },
-            produto(){
-                document.title = this.produto.nome || 'Nome produto';
-                const hash = this.produto.id || '';
-
-                history.pushState(null, null, `#${hash}`)
-            }
-        },
-    mounted() {
-        this.checkLocalStorage();
+    mounted() {        
         this.getProducts();
         this.router();
     }

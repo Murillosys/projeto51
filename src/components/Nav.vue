@@ -26,6 +26,7 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link text-white">
                             <img class="mb-2" src="\img\util\carrinho-compra.png" alt="" width="24" height="24">
+                            <div>{{cartLength}}</div>
                         </a>
                     </li>
                 </ul>
@@ -37,8 +38,18 @@
 
 <script>
 export default {
-    
-  
+    data: () => ({
+        cartLength: ""
+    }),    
+     methods: {
+        getCartLength() {
+            this.cartLength = "55";
+            //this.cartLength = this.$cart.length + 3;          
+        },
+        mounted() {
+        this.getCartLength();
+        } 
+    }
 }
 </script>
 
