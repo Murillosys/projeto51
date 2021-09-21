@@ -1,4 +1,4 @@
-# project51
+# project 51 - Academia
 
 ## Project setup
 ```
