@@ -5,6 +5,7 @@
 <script>
 import Produto from './components/Produto.vue'
 
+
 export default {
   name: 'App',
   components: {
