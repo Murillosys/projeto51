@@ -1,6 +1,5 @@
 <template>
-     <main class="flex-fill">
-        <div class="container">
+    <div class="container">
             <h1><b>PRODUTOS: </b>Informe seus dados, do produto por favor</h1>
             <hr>
             <form class="mt-3">
@@ -45,8 +44,4 @@
 
                 </div>
         </div>
-
-
-
-    </main>
 </template>

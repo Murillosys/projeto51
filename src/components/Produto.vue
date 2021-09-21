@@ -1,4 +1,6 @@
 <template>
+
+
 <main>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary border-bottom shadow-sm mb3">
         <div class="container">
@@ -24,9 +26,10 @@
                     <li class="nav-item">
                         <a href="#" class="nav-link text-white">Entrar</a>
                     </li>
-                    <li class="nav-item">
+                      <li class="nav-item">
                         <a href="#" class="nav-link text-white">
-                            <img class="mb-2" src="\img\util\carrinho-compra.png" alt="" width="24" height="24">{{cartLength}}<img/>                            
+                            <img class="mb-2" src="\img\util\carrinho-compra.png" alt="" width="24" height="24">{{cartLength}}<img/>
+                                                 
                         </a>
                     </li>
                 </ul>
@@ -35,8 +38,7 @@
         </div>
     </nav>
 
-
-
+           
 
     <div class="container">
     <hr class="mt-3">
