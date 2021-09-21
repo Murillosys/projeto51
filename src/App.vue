@@ -7,7 +7,7 @@
                 <router-link to="/" class="nav-link">Home</router-link>
             </li>
             <li class="nav-item">
-                <router-link to="/pedidos" class="nav-link">Pedidos</router-link>
+                <router-link to="/pedido" class="nav-link">Pedidos</router-link>
             </li>
         </div>
         <div class="align-self-end">
