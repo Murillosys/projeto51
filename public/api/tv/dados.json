@@ -1,8 +1,0 @@
-{
-  "id": "tv",
-  "nome": "tv",
-  "preco": 5000,
-  "descricao": "Desc do produto do produto",
-  "estoque": 5,
-  "img": "./api/tv/tv.jpg"
-}

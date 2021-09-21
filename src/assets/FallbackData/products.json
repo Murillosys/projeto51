@@ -1,0 +1,78 @@
+[
+    {
+        "id": 1,
+        "title": "TV 4K",
+        "price": 1099.95,
+        "description": "Super TV 4K",
+        "category": "eletrodomestico",
+        "image": "/assets/FallbackData/Photos/tv.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Ar- Condicionado",
+        "price": 2200.3,
+        "description": "Ar condicionado",
+        "category": "eletrodomestico",
+        "image": "/assets/FallbackData/Photos/arcondicionado.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Batedeira",
+        "price": 99.99,
+        "description": "Batedeira top de linha",
+        "category": "eletrodomestico",
+        "image": "/assets/FallbackData/Photos/batedeira.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Celular",
+        "price": 1599.99,
+        "description": "Celular",
+        "image": "/assets/FallbackData/Photos/celular.jpg"
+    },
+    {
+        "id": 5,
+        "title": "Climatizador",
+        "price": 695,
+        "description": "climatizador",
+        "image": "/assets/FallbackData/Photos/climatizador.jpg"
+    },
+    {
+        "id": 6,
+        "title": "Fogão",
+        "price": 1689,
+        "description": "Fogão top de linha",
+        "image": "/assets/FallbackData/Photos/fogao.jpg"
+    },
+    {
+        "id": 7,
+        "title": "Fritadeira",
+        "price": 199.99,
+        "description": "Fritadeira",
+        "category": "eletrodomestico",
+        "image": "/assets/FallbackData/Photos/fritadeira.jpg"
+    },
+    {
+        "id": 8,
+        "title": "Geladeira",
+        "price": 3990.99,
+        "description": "Geladeira frost",
+        "image": "/assets/FallbackData/Photos/geladeira.jpg"
+    },
+    {
+        "id": 9,
+        "title": "Jbl",
+        "price": 599,
+        "description": "JBL Original",
+        "category": "eletrodomestico",
+        "image": "/assets/FallbackData/Photos/jbl.jpg"
+    },
+    {
+        "id": 10,
+        "title": "Ventilador",
+        "price": 199,
+        "description": "Corra do calor",
+        "category": "eletrodomestico",
+        "image": "/assets/FallbackData/Photos/ventilador.jpg"
+    } 
+]
