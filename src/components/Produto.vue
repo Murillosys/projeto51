@@ -41,6 +41,9 @@ export default {
   name: 'Produto',
     data: () => ({
         produtos: [],
+        
+        //Vetor recebe Obj p/ carrinho
+        carrinho: [],
         produto: {},
         alertMessage: "",
         alertStatus: false,
@@ -80,24 +83,24 @@ export default {
             this.produto = await JSON.parse(JSON.stringify(data));
         },
         atualizaQuantidadeCarrinho(){
-            this.cartLength = this.$cart.length
+            this.cartLength = this.carrinho.length
         },
         addCartItem: function (produto) {
-            this.$cart.push(produto);
+            this.carrinho.push(produto);
             this.atualizaQuantidadeCarrinho()
 
             // 2 Linhas de baixo só pra teste visualização do carrinho no console
             this.showAlert(produto.nome+" foi adicionado ao carrinho");
-            this.showAlert(this.$cart);
+            this.showAlert(this.carrinho);
         },        
         removeCartItem : function (produto) {
-            if( this.$cart.find( produtoDoCarrinho => produtoDoCarrinho.id === produto.id )) {
-                this.$cart.splice(this.$cart.indexOf(produto), 1);
+            if( this.carrinho.find( produtoDoCarrinho => produtoDoCarrinho.id === produto.id )) {
+                this.carrinho.splice(this.carrinho.indexOf(produto), 1);
                 this.atualizaQuantidadeCarrinho()
             }            
 
             // 1 Linha de baixo só pra teste visualização do carrinho no console
-            this.showAlert(this.$cart);
+            this.showAlert(this.carrinho);
         },
         showAlert(message) {
             console.log(message);
