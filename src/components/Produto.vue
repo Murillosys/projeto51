@@ -59,7 +59,7 @@
                                 {{produto.descricao}}
                             </p>
                         </div>
-                        <button class="btn btn-primary mt-2 d-block"  type="button" v-on:click="removeCartItem(produto)"> Remover </button>
+                        <!-- <button class="btn btn-primary mt-2 d-block"  type="button" v-on:click="removeCartItem(produto)"> Remover </button>-->
                         <button class="btn btn-primary mt-2 d-block"  type="button" v-on:click="addCartItem(produto)"> Comprar </button>
                         <div class="card-footer">                           
                             
