@@ -1,6 +1,10 @@
 <template>
-    <div>
-       <h1>Carrinho</h1>
+    <div class="container mt-10">
+       
+      <pre>
+          {{store.state.cart}}
+      </pre>
+      
        
     </div>
 </template>

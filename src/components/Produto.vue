@@ -3,7 +3,8 @@
     <div class="container"> 
         <hr class="mt-3">
             <div class="row g-3">
-                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" v-for="produto in produtos" :key="produto.index">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" 
+                v-for="produto in produtos" :key="produto.index">
                     <div class="card text-center bg-light">
                         <a href="#" class="position-absolute end-0 p-2 text-danger">
                             <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
