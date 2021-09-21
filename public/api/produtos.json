@@ -1,62 +1,72 @@
 [
   {
     "id": "arcondicionado",
-    "nome": "arcondicionado",
+    "nome": "Ar-Condicionado",
     "preco": 2999,
+    "descricao": "Saia do calor já",
     "img": "./api/arcondicionado/arcondicionado.jpg"
   },
   {
     "id": "batedeira",
-    "nome": "batedeira",
+    "nome": "Batedeira",
     "preco": 500,
+    "descricao": "A Batedeira",
     "img": "./api/batedeira/batedeira.jpg"
   },
   {
     "id": "celular",
-    "nome": "celular",
+    "nome": "Celular",
     "preco": 1300,
+    "descricao": "Otimo celular barato",
     "img": "./api/celular/celular.jpg"
   },
   {
     "id": "climatizador",
-    "nome": "climatizador",
+    "nome": "Climatizador",
     "preco": 800,
+    "descricao": "Muito barato",
     "img": "./api/climatizador/climatizador.jpg"
   },
   {
     "id": "fogao",
-    "nome": "fogao",
+    "nome": "Fogão",
     "preco": 1500,
+    "descricao": "Otimo fogão e barato",
     "img": "./api/fogao/fogao.jpg"
   },
   {
     "id": "fritadeira",
-    "nome": "fritadeira",
+    "nome": "Fritadeira",
     "preco": 350,
+    "descricao": "exelente fritadeira",
     "img": "./api/fritadeira/fritadeira.jpg"
   },
   {
     "id": "geladeira",
     "nome": "geladeira",
     "preco": 1800,
+    "descricao": "Desc do produto do produto",
     "img": "./api/geladeira/geladeira.jpg"
   },
   {
     "id": "jbl",
     "nome": "jbl",
     "preco": 999,
+    "descricao": "Desc do produto do produto",
     "img": "./api/jbl/jbl.jpg"
   },
   {
     "id": "tv",
     "nome": "tv",
     "preco": 5000,
+    "descricao": "Desc do produto do produto",
     "img": "./api/tv/tv.jpg"
   },
   {
     "id": "ventilador",
     "nome": "ventilador",
     "preco": 150,
+    "descricao": "Desc do produto do produto",
     "img": "./api/ventilador/ventilador.jpg"
   }
 ]

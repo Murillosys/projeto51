@@ -1,19 +1,24 @@
-# projeto51
+# 51
 
-Sempre ao clonar o projeto rodar o comando: 
-    npm install
+## Project setup
+```
+npm install
+```
 
-Project setup: 
-    npm install
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-Compiles and hot-reloads for development:
-    npm run serve
+### Compiles and minifies for production
+```
+npm run build
+```
 
-Compiles and minifies for production:
-    npm run build
+### Lints and fixes files
+```
+npm run lint
+```
 
-Run your tests:
-    npm run test
-
-Lints and fixes files:
-    npm run lint
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).

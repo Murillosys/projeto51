@@ -1,7 +1,6 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import router from './router'
+import store from './store'
 
-const app = createApp(App)
-app.mount('#app')
-
-app.config.globalProperties.$cart = []
+createApp(App).use(store).use(router).mount('#app')

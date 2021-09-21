@@ -1,78 +1,38 @@
 <template>
-
-
-<main>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary border-bottom shadow-sm mb3">
-        <div class="container">
-            <a class="navbar-brand"><strong>VENDAS.COM</strong></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse"
-             data-target=".navbar-collapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="navbar-collapse collapse">
-            <ul class="navbar-nav flex-grow-1">
-                <li class="nav-item">
-                    <a href="" class="nav-link text-white">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a href="" class="nav-link text-white">Produtos</a>
-                </li>
-            </ul>
-            <div class="align-self-end">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="#" class="nav-link text-white">Cadastra-se</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link text-white">Entrar</a>
-                    </li>
-                      <li class="nav-item">
-                        <a href="#" class="nav-link text-white">
-                            <img class="mb-2" src="\img\util\carrinho-compra.png" alt="" width="24" height="24">{{cartLength}}<img/>
-                                                 
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        </div>
-    </nav>
-
-           
-
-    <div class="container">
-    <hr class="mt-3">
-        <div class="row">
-            <div class="col-md-4 produto" v-for="produto in produtos" :key="produto.index">
-                <div class="card mb-4 shadow-sm">
+ <main>
+    <div class="container"> 
+        <hr class="mt-3">
+            <div class="row g-3">
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3 col-xl-2" v-for="produto in produtos" :key="produto.index">
                     <div class="card text-center bg-light">
                         <a href="#" class="position-absolute end-0 p-2 text-danger">
                             <i class="bi-suit-heart" style="font-size: 24px; line-height: 24px;"></i>
                         </a>
-
-                        <img :src="produto.img" alt="" @click="getProduct(produto.id)" class="card-img-top">
-
                         <div class="card-header">
-                            {{produto.valor}}
+                            <img :src="produto.img" alt="" @click="getProduct(produto.id)" class="card-img-top">
                         </div>
                         <div class="card-body">
                             <h5 class="card-title">{{produto.nome}}</h5>
-                            <p class="card-text truncar-3l">
-                                {{produto.descricao}}
-                            </p>
+                            <p> {{produto.descricao}} </p> 
                         </div>
-                        <!-- <button class="btn btn-primary mt-2 d-block"  type="button" v-on:click="removeCartItem(produto)"> Remover </button>-->
-                        <button class="btn btn-primary mt-2 d-block"  type="button" v-on:click="addCartItem(produto)"> Comprar </button>
-                        <div class="card-footer">                           
-                            
-                            <small class="text-success">Produto em estoque</small>
+                        <div class="card-body">
+                            <b> R$:{{produto.preco}}</b>
+                        </div>
+                        <div class="card-footer">
+                            <div class="container">
+                                <button class="btn btn-primary mt-2  btn-lg"  type="button" v-on:click="addCartItem(produto)"> Comprar </button>
+                            </div>
+                            <div class="container">
+                                <button class="btn btn-outline-danger mt-2  btn-sm"  type="button" v-on:click="removeCartItem(produto)"> Remover </button>
+                            </div>
+                            <br><small class="text-success">Produto em estoque</small>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</main>
+        <hr class="mt-5">
+    </main>
 </template>
 
 <script>
@@ -156,9 +116,9 @@ export default {
         this.router();
     }
 }
+
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 
 <style scoped>
 h3 {
